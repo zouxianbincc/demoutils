@@ -6,16 +6,16 @@
 ext {
     android = [
             //编译的SDK版本  
-            compileSdkVersion: 26,
+            compileSdkVersion: 27,
 
             //项目id
             applicationId:"com.demoutil",
             //支持SDK的最低版本  
             minSdkVersion    : 19,
             //支持SDK的目标版本 
-            targetSdkVersion : 26,
+            targetSdkVersion : 27,
             //编译的Tools版本  
-            buildToolsVersion: "26.0.3",
+            buildToolsVersion: "27.0.3",
             //版本号
             versionCode:1,
             //版本名称
@@ -25,7 +25,7 @@ ext {
     ]
 
     //依赖库版本
-    supportLibrary = "26.1.0"
+    supportLibrary = "27.1.1"
     //库依赖
     supportDependencies = [
             //基础库
