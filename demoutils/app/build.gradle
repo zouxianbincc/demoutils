@@ -28,9 +28,7 @@ android {
 }
 
 dependencies {
-    androidTestImplementation('com.android.support:support-annotations:26.1.0') {
-        force = true
-    }
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //基础库
     implementation librarys.implementation_support_appcompat

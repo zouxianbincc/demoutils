@@ -10,8 +10,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
 
-        //为在jitpack上发布做准备
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
 
         //避免butterKnife在library中使用出现id冲突
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'

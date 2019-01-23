@@ -1,8 +1,6 @@
 apply plugin: 'com.android.library'
 
-//为jitpack上发布做准备
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.ShaoqiangPei'
+
 
 //引用butterknife
 apply plugin: 'com.jakewharton.butterknife'
@@ -31,40 +29,6 @@ android {
         }
     }
 
-    //==========以下添加是为了让自己的库发布到JitPack上仍能显示注释==================
-    // 打包源码jar
-    task sourcesJar(type: Jar) {
-        from android.sourceSets.main.java.srcDirs
-        classifier = 'sources'
-    }
-    //编译groovy代码时采用 UTF-8
-    tasks.withType(GroovyCompile) {
-        groovyOptions.encoding = "MacRoman"
-    }
-
-    //编译JAVA文件时采用UTF-8
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
-    }
-
-    task javadoc(type: Javadoc) {
-        failOnError false
-        source = android.sourceSets.main.java.sourceFiles
-        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-        classpath += configurations.compile
-    }
-
-    // 打包文档jar
-    task javadocJar(type: Jar, dependsOn: javadoc) {
-        classifier = 'javadoc'
-        from javadoc.destinationDir
-    }
-
-    artifacts {
-        archives sourcesJar
-        archives javadocJar
-    }
-//==========以上添加是为了让自己的库发布到JitPack上仍能显示注释==================
 
 }
 
